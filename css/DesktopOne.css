@@ -134,9 +134,10 @@
     align-items: center;
     position: absolute;
     top: 8%;
-    right: 150px;
-    left: 150px;
+    right: 0px;
+    left: 0px;
     gap: 20px;
+    max-width: 1122px;
     margin: auto;
     @media only screen and (max-width: 550px) {
         flex-direction: column;
