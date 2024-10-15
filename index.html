@@ -34,7 +34,7 @@
                     <img src="public/images/img_header_logo.png" alt="Header Logo" class="header__logo" />
                     <ul class="header__menu">
                         <li>
-                            <a href="#">
+                            <a href="#about">
                                 <p class="header__menu-item ui heading size-headings">About</p>
                             </a>
                         </li>
@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#contact">
                                 <p class="header__menu-item ui heading size-headings">Contact</p>
                             </a>
                         </li>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <!-- about us section -->
-            <div class="columnwedothe">
+            <div id="about" class="columnwedothe">
                 <h2 class="desktop-one__description ui heading size-headingmd">
                     We do the complex satellite data processing. You get the valuable insights
                 </h2>
@@ -112,11 +112,33 @@
                     <h3 class="desktop-one__description ui heading size-headingmd">"Grounded in Earth, Elevated by
                         Space"</h3>
                 </div>
-                <p class="contact__email ui text size-texts">contact: anand@yugenspace.com</p>
+                <p id = "contact" class="contact__email ui text size-texts">contact: anand@yugenspace.com</p>
                 <p class="footer__copyright ui text size-texts">© 2024 Yugen Space. All right reserved.</p>
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+        
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+        
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    
+    
+    </script>
+
 </body>
 
 </html>
