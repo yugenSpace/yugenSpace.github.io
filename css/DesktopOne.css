@@ -134,8 +134,8 @@
     align-items: center;
     position: absolute;
     top: 8%;
-    right: 0px;
-    left: 0px;
+    right: 150px;
+    left: 150px;
     gap: 20px;
     margin: auto;
     @media only screen and (max-width: 550px) {
